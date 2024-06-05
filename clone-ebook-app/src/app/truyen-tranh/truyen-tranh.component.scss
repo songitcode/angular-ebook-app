@@ -1,0 +1,39 @@
+.breadcrumbs_item-link {
+    color: #0081B1;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.breadcrumbs_item-link:hover {
+    color: #000;
+}
+
+.left-header {
+    display: none;
+}
+
+.img-book {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.img-book {
+    border-radius: 0px;
+    transition: .3s;
+}
+
+.image-book:hover .img-book {
+    scale: (1.05);
+}
+
+.name-book {
+    padding-top: 15px;
+}
+
+.demos {
+    margin: 0 5rem 0 5rem;
+}

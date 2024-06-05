@@ -1,0 +1,171 @@
+.keyword {
+    border: 1px solid #0081b1;
+    width: 100%;
+    padding: 10px;
+}
+
+.keyword:focus {
+    outline: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#gform {
+    display: flex;
+}
+
+.button-search {
+    background: #0081b1;
+    border: none;
+    color: #fff;
+}
+
+.div_form {
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.tb-menu {
+    width: 15rem;
+}
+
+ul li {
+    color: #0081b1;
+    list-style: none;
+    border-bottom: dotted 1px #0081b1;
+    font-size: 15px;
+}
+
+ul li:hover {
+    background: #E7F3EA;
+    scale: 1.03;
+}
+
+.icon-menu:hover i {
+    cursor: pointer;
+}
+
+ul li:hover .sub1 {
+    rotate: -90deg;
+    transform-origin: 70% 50%;
+}
+
+.leftmenu {
+    flex-direction: row;
+}
+
+.leftmenu .top-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.top-menu {
+    border-bottom: solid 1px #0082b15f;
+}
+
+i {
+    font-size: 16px;
+}
+
+.dropdown-menu1:checked+.leftmenu {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.menu-drop-truyentranh:hover+#submenu-item-1,
+#submenu-item-1:hover {
+    display: block;
+}
+
+.menu-drop-thuvien:hover+#submenu-item-2,
+#submenu-item-2:hover {
+    display: block;
+}
+
+.menu1 {
+    display: flex;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out, opacity 1s ease-out;
+}
+
+#submenu-item-1,
+#submenu-item-2 {
+    display: none;
+}
+
+.drop-box {
+    margin-left: -10px;
+}
+
+// animation search bar right
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-search {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 18px 16px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.input-search::placeholder {
+    color: transparent;
+}
+
+.input-search:focus::placeholder {
+    color: rgb(131, 128, 128);
+}
+
+.input-search:focus,
+.input-search:not(:placeholder-shown) {
+    background-color: #fff;
+    border: 1px solid #0081b1;
+    width: 290px;
+    cursor: none;
+    padding: 18px 16px 18px 40px;
+}
+
+.icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: -1;
+    border: 1px solid #0081b1;
+}
+
+.fa-search {
+    position: absolute;
+    top: 32%;
+    left: 30%;
+}
+
+.input-search:hover+.icon {
+    background: #0081b1;
+    transform: rotate(360deg);
+    transition: .2s ease-in-out;
+}
+
+.input-search:focus+.icon,
+.input-search:not(:placeholder-shown)+.icon {
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+}
