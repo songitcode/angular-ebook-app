@@ -1,8 +1,166 @@
-<h1 class="d-flex justify-content-center">Test Bootstrap 5</h1>
-<div class="row">
-<div class="card col-lg-4">1
-  <input type="text" class="m-5 form-control">
-</div>
-<div class="card col-lg-4">2</div>
-<div class="card col-lg-4">3</div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="left-header m-1">
+    <div class="d-flex top-menu row align-items-center">
+      <div class="col d-flex align-items-center">
+        <label for="menu-dropdown" class="icon-menu">
+          <i class="fa fa-align-justify ps-1" style="color: #0081b1; font-size: 36px;"></i>
+        </label>
+        <div class="logo-header ms-4">
+          <a href="/"><img loading="lazy" width="67px" height="31px" alt="Thư Viện Sách"
+              src="/assets/images/logo4.png"></a>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-end ">
+        <div class="input-container d-flex">
+          <input placeholder="Tìm kiếm..." class="input-search" name="text" type="text">
+          <div class="icon"><i class="fas fa-search"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <input type="checkbox" name="menu-dropdown" id="menu-dropdown" class="dropdown-menu1 d-none">
+    <div class="leftmenu row menu1">
+      <table cellpadding="0" cellspacing="0" width="100%" class="col-md-2">
+        <tbody>
+          <tr>
+            <td valign="top" width="100%" style="padding:8px;">
+              <ul class="top-menu" style="font-size: 16px;">
+                <li class="p-2">
+                  <a href="/" class="nav-link"><i class="fas fa-home pe-2"></i>Trang chủ</a>
+                </li>
+                <li class="p-2">
+                  <a href="/thu-vien-sach-dien-tu-1066/" class="nav-link"><i class="fas fa-bullhorn pe-2"></i>Giới
+                    Thiệu</a>
+                </li>
+                <li>
+                  <label for="menu-drop-truyentranh" class="d-flex p-2 justify-content-between">
+                    <a href="truyen-tranh" class="nav-link"><i class="fas fa-image pe-2"></i>
+                      Truyện Tranh
+                    </a>
+                    <div class="div_arrow"><i id="icon3" class="sub1 fas fa-angle-down ps-2"></i>
+                    </div>
+                  </label>
+                </li>
+
+                <li>
+                  <label for="menu-drop-thuvien" class="d-flex p-2 justify-content-between">
+                    <a href="/" class="nav-link"><i class="fas fa-archive pe-2"></i>
+                      Thư Viện
+                    </a>
+                    <div class="div_arrow"><i id="icon3" class="sub1 fas fa-angle-down ps-2 "></i>
+                    </div>
+                  </label>
+                </li>
+
+                <li class="p-2">
+                  <a href="/" class="nav-link"><i class="fas fa-group pe-2"></i>Tác Giả</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="col-md-2 drop-box">
+        <input type="checkbox" name="menu-drop-truyentranh" id="menu-drop-truyentranh"
+          class="menu-drop-truyentranh d-none">
+        <ul class="sub-menu fs16 p-2" id="submenu-item-1">
+          <li id=" menu-item-31" class="p-2"><a class="nav-link" href="/truyen-tranh/manga/"> <i
+                class="me-3 fas fa-book-open"></i>Manga</a></li>
+          <li id="menu-item-32" class="p-2"><a class="nav-link" href="/truyen-tranh/manhua/"> <i
+                class="me-3 fas fa-bug"></i>Manhua</a>
+          </li>
+          <li id="menu-item-33" class="p-2"><a class="nav-link" href="/truyen-tranh/manhwa/"> <i
+                class="me-3 fas fa-cube"></i>Manhwa</a>
+          </li>
+          <li id="menu-item-34" class="p-2"><a class="nav-link" href="/truyen-tranh/action/"> <i
+                class="me-3 fas fa-fire-alt"></i>Action</a>
+          </li>
+          <li id="menu-item-35" class="p-2"><a class="nav-link" href="/truyen-tranh/adventure/"> <i
+                class="me-3 fas fa-binoculars"></i>Adventure</a></li>
+          <li id="menu-item-36" class="p-2"><a class="nav-link" href="/truyen-tranh/comedy/"> <i
+                class="me-3 fas fa-laugh"></i>Comedy</a>
+          </li>
+          <li id="menu-item-37" class="p-2"><a class="nav-link" href="/truyen-tranh/fantasy/"> <i
+                class="me-3 fas fa-dragon"></i>Fantasy</a>
+          </li>
+          <li id="menu-item-38" class="p-2"><a class="nav-link" href="/truyen-tranh/shounen/"> <i
+                class="me-3 fas fa-child"></i>Shounen</a></li>
+          <li id="menu-item-39" class="p-2"><a class="nav-link" href="/thu-vien/"><i
+                class="me-3 fas fa-ellipsis-h"></i>Xem
+              Thêm</a></li>
+        </ul>
+
+        <input type="checkbox" name="menu-drop-thuvien" id="menu-drop-thuvien" class="menu-drop-thuvien d-none">
+        <ul class="sub-menu fs16 p-2" id="submenu-item-2">
+          <li id="menu-item-61" class="p-2"><a href="/thu-vien/tam-ly-ky-nang/" class="nav-link"> <i
+                class="me-3 fas fa-balance-scale"></i>
+              Tâm Lý - Kỹ Năng</a> </li>
+          <li id="menu-item-62" class="p-2"><a href="/thu-vien/ton-giao-tam-linh/" class="nav-link"> <i
+                class="me-3 fas fa-sun"></i>
+              Tôn Giáo - Tâm Linh</a> </li>
+          <li id="menu-item-63" class="p-2"><a href="/thu-vien/khoa-hoc-cong-nghe/" class="nav-link"> <i
+                class="me-3 fas fa-cogs"></i>
+              Khoa Học - Công Nghệ</a> </li>
+          <li id="menu-item-64" class="p-2"><a href="/thu-vien/kien-truc-xay-dung/" class="nav-link"> <i
+                class="me-3 fas fa-building"></i>
+              Kiến Trúc - Xây Dựng</a> </li>
+          <li id="menu-item-65" class="p-2"><a href="/thu-vien/nong-lam-ngu/" class="nav-link"> <i
+                class="me-3 fas fa-leaf"></i>
+              Nông - Lâm - Ngư</a> </li>
+          <li id="menu-item-66" class="p-2"><a href="/thu-vien/y-hoc-suc-khoe/" class="nav-link"> <i
+                class="me-3 fas fa-medkit"></i>
+              Y Học - Sức Khỏe</a> </li>
+          <li id="menu-item-67" class="p-2"><a href="/thu-vien/lich-su-quan-su/" class="nav-link"> <i
+                class="me-3 fas fa-history"></i>
+              Lịch Sử - Quân Sự</a> </li>
+          <li id="menu-item-68" class="p-2"><a href="/thu-vien/nhan-vat-lich-su/" class="nav-link"> <i
+                class="me-3 fas fa-users"></i>
+              Nhân Vật Lịch Sử</a> </li>
+          <li id="menu-item-69" class="p-2"><a href="/thu-vien/" class="nav-link"><i
+                class="me-3 fas fa-ellipsis-h"></i>Xem
+              Thêm</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="div_header" class="div_header d-flex justify-content-center mt-5 mb-2">
+    <div id="nongsan" class="div_nongsan" style="display: block;"><img loading="lazy" width="189px" height="93.24px"
+        alt="Thư Viện Sách" src="/assets/images/logo4.png"></div>
+  </div>
+  <div id="div_form" class="div_form">
+    <form action="" method="POST" id="gform">
+      <input type="search" autofocus="" name="keyword" id="keyword" class="keyword" autocomplete="off"
+        placeholder="Tìm kiếm..." value="">
+      <button type="submit" class="button-search p-2" aria-label="search">Tìm</button>
+    </form>
+    <p id="text" class="p_text" style="display: block; text-align: center;">Được xây dựng nhằm mục đích phụng sự nhân
+      loại
+      phát triển về
+      Tri thức và Trí tuệ</p>
+    <div id="searchresultdata" class="searchtoolbar" style="display: none;"></div>
+  </div>
+  <router-outlet></router-outlet>
+  <hr>
+  <footer>
+    <div class="p-3 d-flex justify-content-center">ThuVienSach by Son Tam © 2024</div>
+    <div class="row container">
+      <div class="col-md-8">
+        
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
