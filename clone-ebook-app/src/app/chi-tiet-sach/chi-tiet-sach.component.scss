@@ -1,0 +1,531 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    margin: 0 10rem 0 10rem;
+}
+
+.line {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #CACACACA;
+}
+
+.breadcrumbs_item-link {
+    color: #0081B1;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.breadcrumbs_item-link:hover {
+    color: #000;
+}
+
+.btn-doc-sach,
+.btn-chuong,
+.btn-tai-sach {
+    border: none;
+    border-radius: 5px;
+    padding: 13px;
+    background: #01688E;
+    color: #fff;
+}
+
+.btn-chuong {
+    background: #198754;
+}
+
+.btn-chuong {
+    background: #198754;
+}
+
+.btn-tai-sach {
+    background: none;
+    border: 1px solid #198754;
+    color: #000;
+    transition: background .5s;
+}
+
+.icon {
+    transition: scale .5s;
+}
+
+.btn-tai-sach:hover .icon {
+    scale: 1.5;
+}
+
+.btn-tai-sach:hover {
+    background: #198754;
+    color: #fff;
+}
+
+.btn-chuong:hover {
+    background: #198a55;
+}
+
+// Animation cho TUSACHTINHHOA 
+
+$color-blue: #2e95aa;
+$color-yellow: #fed754;
+$color-orange: #cc4b48;
+$color-gray: #c1c1c1;
+$color-green: #abc3b5;
+
+
+.main-content {
+    margin: 5em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1 {
+    width: 100%;
+    margin: 0 auto 1.5em;
+    font-size: 30px;
+
+    small {
+        text-transform: none;
+        display: block;
+        margin: 20px 0;
+        font: 300 20px 'QuickSand', sans-serif;
+        color: #999;
+    }
+}
+
+.moleskine-wrapper {
+    max-width: calc(100% / 4);
+    min-width: 10em;
+}
+
+.moleskine-notebook {
+    height: 250px;
+    width: 175px;
+    position: relative;
+    transition: .4s ease-in-out;
+    border-radius: 5px 15px 15px 5px;
+    transform-origin: left center 0px;
+    display: inline-block;
+    margin: 30px;
+    perspective: 800px;
+
+    &:hover {
+        transform: rotateZ(-10deg);
+
+        .notebook-cover {
+            transform: rotateY(-50deg);
+            z-index: 999;
+            box-shadow: 20px 10px 50px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+}
+
+.notebook-cover {
+    background: #cc4b48;
+    height: 250px;
+    width: 175px;
+    position: absolute;
+    border-radius: 5px 15px 15px 5px;
+    z-index: 10;
+    transition: .5s linear;
+    transform-style: preserve-3d;
+    transform-origin: left center 0px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: calc(100% + 2px);
+        top: -1px;
+        z-index: 100;
+        border-radius: 2px;
+        right: 25px;
+        transition: 2s ease;
+        background: linear-gradient(to right,
+                darken($color-orange, 15%) 0%,
+                $color-orange 12%,
+                darken($color-orange, 15%) 25%,
+                $color-orange 37%,
+                darken($color-orange, 15%) 50%,
+                $color-orange 62%,
+                darken($color-orange, 15%) 75%,
+                $color-orange 87%,
+                darken($color-orange, 15%) 100%);
+    }
+}
+
+.notebook-cover {
+    &.blue {
+        background: $color-blue;
+
+        &:before {
+            background: linear-gradient(to right,
+                    darken($color-blue, 15%) 0%,
+                    $color-blue 12%,
+                    darken($color-blue, 15%) 25%,
+                    $color-blue 37%,
+                    darken($color-blue, 15%) 50%,
+                    $color-blue 62%,
+                    darken($color-blue, 15%) 75%,
+                    $color-blue 87%,
+                    darken($color-blue, 15%) 100%);
+        }
+    }
+
+    &.green {
+        background: $color-green;
+
+        &:before {
+            background: linear-gradient(to right,
+                    darken($color-green, 15%) 0%,
+                    $color-green 12%,
+                    darken($color-green, 15%) 25%,
+                    $color-green 37%,
+                    darken($color-green, 15%) 50%,
+                    $color-green 62%,
+                    darken($color-green, 15%) 75%,
+                    $color-green 87%,
+                    darken($color-green, 15%) 100%);
+        }
+    }
+
+    &.yellow {
+        background: $color-yellow;
+
+        &:before {
+            background: linear-gradient(to right,
+                    darken($color-yellow, 20%) 0%,
+                    $color-yellow 12%,
+                    darken($color-yellow, 20%) 25%,
+                    $color-yellow 37%,
+                    darken($color-yellow, 20%) 50%,
+                    $color-yellow 62%,
+                    darken($color-yellow, 20%) 75%,
+                    $color-yellow 87%,
+                    darken($color-yellow, 20%) 100%);
+        }
+    }
+}
+
+.notebook-skin {
+    height: 50px;
+    background: #e8e8e0;
+    margin-top: 80px;
+    padding: 15px;
+    font-size: 12px;
+    position: relative;
+    z-index: 10;
+    color: #222;
+    text-align: left;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        left: 0;
+        bottom: 0;
+        background: #cddc39;
+    }
+}
+
+.notebook-page {
+    height: 100%;
+    width: 175px;
+    position: absolute;
+    background-color: #fbfae8;
+    z-index: 0;
+    border-radius: 5px 16px 16px 5px;
+    overflow: hidden;
+
+    &.ruled {
+        background: linear-gradient(to bottom, #fbfae8 9px, #e4e4e4 1px);
+        background-size: 100% 10px;
+    }
+
+    &.squared {
+        background-image: linear-gradient(#e4e4e4 1px, transparent 1px), linear-gradient(90deg, #e4e4e4 1px, transparent 1px);
+        background-size: 10px 10px, 10px 10px, 2px 2px, 2px 2px;
+    }
+
+    &.dotted {
+        background: linear-gradient(90deg, #fbfae8 10px, transparent 1%) center, linear-gradient(#fbfae8 10px, transparent 1%) center, #999;
+        background-size: 11px 11px;
+    }
+}
+
+// hiệu ứng kính lúp
+
+// CSS cho giới thiệu nội dung sách
+.text-book {
+    padding: 25px;
+    border: 1px solid #e6e6e6;
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity .5s linear;
+}
+
+.drop-gioi-thieu-book:hover label {
+    text-decoration: underline;
+    color: #0081B1;
+    cursor: pointer;
+}
+
+#drop-box:checked+.text-book {
+    max-height: max-content;
+    opacity: 1;
+}
+
+//
+.btn-animation-download:hover::before,
+.btn-animation-download:hover::after {
+    animation: hieuUngVongTrong 1s infinite linear;
+}
+
+.btn-animation-download::before,
+.btn-animation-download::after {
+    content: '';
+    border: solid 3px white;
+    position: absolute;
+    top: calc(50% - 7px);
+    left: calc(50% - 7px);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.btn-animation-download {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes hieuUngVongTrong {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(10);
+        opacity: 0.01;
+    }
+}
+
+.btn-animation-download:hover::after {
+    animation-delay: .5s;
+    opacity: .01;
+}
+
+// right css
+
+.right {
+    margin: 10px;
+    padding: 10px;
+}
+
+.list-bai-viet>article {
+    transition: .5s;
+}
+
+.list-bai-viet>article:hover .bai-viet {
+    background: #E7F3EA;
+    cursor: pointer;
+}
+
+.list-bai-viet>article:hover h6 {
+    text-decoration: underline;
+    color: #0081B1;
+}
+
+// Animation comment btn
+
+#comment {
+    width: 50rem;
+    height: 120px;
+}
+
+.btn-comment:hover {
+    color: #fff;
+}
+
+.btn-comment {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    border: 3px solid #0081B1;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.btn-comment::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0081B1;
+    transform: translateX(-100%);
+    transition: all .5s;
+    z-index: -1;
+}
+
+.btn-comment:hover::before {
+    transform: translateX(0);
+}
+
+
+// Animation btn-download
+.btn-animation-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #40B3A2;
+    border: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 18px 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-animation-download:hover {
+    opacity: .95;
+}
+
+.btn-animation-download .animation {
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+}
+
+// animation input
+.group {
+    position: relative;
+}
+
+.input-comment {
+    font-size: 16px;
+    padding: 5px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #0081B1;
+    background: transparent;
+}
+
+.input-comment:focus {
+    outline: none;
+}
+
+.group label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    bottom: 1px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.input-comment:focus~label,
+.input-comment:valid~label {
+    top: -15px;
+    font-size: 14px;
+    color: #0081B1;
+}
+
+.bar {
+    position: relative;
+    display: block;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    background: #0081B1;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.input-comment:focus~.bar:before,
+.input-comment:focus~.bar:after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.input-comment:focus~.highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #0081B1;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+textarea {
+    border: #0081B1 1px solid;
+    outline: none;
+    padding: 13px;
+}
+
+// animation text aria
